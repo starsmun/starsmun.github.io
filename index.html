@@ -1,0 +1,330 @@
+<html>
+<head>
+<script src="script.js" defer></script>
+<style>
+
+	@font-face {
+		font-family: 'Serpentine Sans ICG Oblique';
+		src: url('fonts/serpentine_sans_icg_oblique.ttf') format('truetype');
+		font-style: oblique;
+		font-weight: normal;
+	}
+
+	body {
+		margin: 0;
+		font-family: Sans-serif;
+		font-stretch: 200%;
+		font-size: 20px;
+		line-height: 1.5;
+		background-color: black;
+        transition: filter 0.5s;
+	}
+
+	p {
+		margin: 0;
+	}
+
+	h0 {
+		font-family: 'Serpentine Sans ICG Oblique', sans-serif;
+		font-size: 145px;
+		color: white;
+		margin: 0;
+		position: relative;
+		left: 1%;
+		transform:translateX(-50%);
+		line-height: 1;
+	}
+
+	h1 {
+		font-size:47px;
+	}
+
+	h2 {
+		font-size: 40px;
+
+	}
+
+	h3 {
+		font-size: 30px;
+		margin: 0;
+	}
+
+	u {
+		text-decoration: underline;
+	}
+
+	i {
+		font-style: italic;
+	}
+
+	ul {
+		list-style: none;
+	}
+
+	#Header {
+		width: 100%;
+		margin-top: 50px;
+
+	}
+
+	.Line {
+		width: 100%;
+		height: 15px;
+		background-color: white;
+		margin-bottom: 5px;
+		border-radius: 3px;
+
+	}
+
+	#Boxes ul li {
+			position: relative;
+			padding-left: 20px; /* adjust as needed */
+	}
+	
+	#Genres {
+		height: 150px;
+	
+	}
+	
+	#Genres ul {
+		width: max-content;
+		padding: 0;
+	}
+
+	#Genres ul li {
+			display: inline-block;
+		padding: 0 40px;
+	}
+
+
+
+	#Boxes ul li::before {
+		content: "⚈";
+		font-size: 10pt;
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	#Boxes li span {
+		margin-left: 1%;
+	}
+
+
+	.CenterDivH {
+		position: absolute;
+		left: 50%;
+		transform:translateX(-50%)
+	}
+
+	#Content {
+		width: 1200px;
+		background-color: black;
+		height: 100vh;
+		overflow: hidden;
+	}
+
+	#Boxes {
+		height: 350px;
+		display: flex;
+		width: 100%;
+		margin-top: 30px;
+
+	}
+
+	#Boxes > article {
+		height: calc(100% - 14px);
+		margin: 7px;
+		overflow: hidden;
+		color: white;
+
+	}
+
+	.textcenter{
+		margin: 0;
+		position: relative;
+		top: 50%;
+		left: 50%;
+		transform:translate(-50%, -50%)
+	}
+
+
+	#NewReleases {
+		background-color:#ffa900;
+		color: black !important;
+		width: 420px;
+	}
+
+	#NewReleases > div{
+		width: 100%;
+		padding-left: 40px;
+	}
+
+	#Downloads {
+		background-color:#414141;
+		width: 370px;
+	}
+
+
+
+	#DoubleBox {
+		width: 370px;
+	}
+
+	#DoubleBox > div {
+		margin: 0;
+		height: calc(50% - 5px);
+		background-color:#303030;
+	}
+	
+	#file {
+      -webkit-appearance: none; /* For WebKit browsers */
+      appearance: none;
+      width: 1000px;
+      height: 50px;
+    }
+
+    #file::-webkit-progress-value {
+      background: linear-gradient(180deg, rgba(80,200,200,1) 0%, rgba(25,114,178,1) 30%, rgba(0,63,120,1) 70%, rgba(0,27,50,1) 85%);
+    }
+
+    #file::-webkit-progress-bar {
+      background: #AAAAAA;
+      border: solid #AAAAAA;
+      border-width: 9px 13px;
+      border-radius: 3px;
+      box-shadow: inset -5px 0 4px 0 rgba(15,15,15,0.7), inset 0 5px 4px 0 rgba(15,15,15,0.7);
+    }
+
+
+    #ProgressBar {
+        height: 100px;    
+    }
+
+    #DownloadButton {
+        height: 70px;
+        width: 300px;
+        background-color: green;
+        font: bold 42px Arial, sans-serif;
+        box-shadow: inset 0 5px 2px rgba(255,255,255,0.7), /* T*/
+                    inset 0 -5px 2px rgba(15,15,15,0.7), /* B*/
+                    inset 5px 0 2px rgba(15,15,15,0.2), /* L*/
+                    inset -5px 0 2px rgba(15,15,15,0.2);  /* R*/
+    }
+
+    #DownloadButton:active {
+        border: 8px green solid;      /* Creates 5px inner gap for shadow */
+        border-top-width: 3px;  
+        background-clip: padding-box;       /* Keep bg inside that gap */
+        box-shadow:
+                    inset 0 6px 0 rgba(0,0,0,1),   /* Top */
+                    inset 2px 0 0 rgba(0,0,0,1);   /* Left */
+    }
+
+    /* The class that applies the rainbow effect */
+    .rainbow-effect {
+        animation: rainbowHue 0.5s linear infinite;
+    }
+
+    /* Defines the animation keyframes */
+    @keyframes rainbowHue {
+        0% {
+            filter: hue-rotate(0deg);
+        }
+        100% {
+            filter: hue-rotate(360deg);
+        }
+    }
+          
+  
+          
+
+}
+
+</style>
+</head>
+<body>
+<div class='CenterDivH'>
+	<div id='content'>
+		<div id='Header'>
+			<h0>FEATURE FILMS</h0>
+			<div style='background-color: #0814fb;' class='line'></div>
+			<div style='background-color: #0045e5; width: 75%' class='line'></div>
+			<div style='background-color: #0075c0; width: 50%' class='line'></div>
+		</div>
+		<section id="boxes">
+			<article id="newReleases" >
+				<div style='height:100px'><h1 class='textcenter'><strong>New Releases:</strong></h1></div>
+				<div style='height:130px; background-color:#ff2c00'>
+					<ul class='textcenter' style='font-size:25px; padding: 0'>
+						<li><span>The Matrix Revolutions</span></li>
+						<li><span>Return Of The King</span></li>
+						<li><span>Cold Mountain</span></li>
+					</ul>
+				</div>
+				<div style='height:100px; font-size: 30px;'>
+					<div class='textcenter' >
+						<h3 style='font-stretch: condensed'><b>Celebrity Spotlight:</b></h3>
+						<h3 style='margin-left: 50px'><b><i>Nicole Kidman</i></b></h3>
+					</div>
+				</div>	
+			</article>
+			<article id='Downloads'>
+				<div class='textcenter' style ='font-size: 18px'>
+					<p style='text-align: center;font-size: 20px'><u>TOP 10 MOST DOWNLOADED</u></p>
+					<ol style='margin-top: 10px; margin-left: 20px'>
+						<li><span>Return Of The King</span></li>
+						<li><span>The Cat in The Hat</span></li>
+						<li><span>The Matrix Revolutions</span></li>
+						<li><span>Paycheck</span></li>
+						<li><span>Cheaper By The Dozen</span></li>
+						<li><span>Peter Pan</span></li>
+						<li><span>Cold Mountain</span></li>
+						<li><span>Master And Commander</span></li>
+						<li><span>The Last Samurai</span></li>
+						<li><span>Mona Lisa Smile</span></li>
+					</ol>
+				</div>
+			</article>
+			<article id='DoubleBox'>
+				<div id='Favourites' style='margin-bottom:10px;'>
+					<div class='textcenter'> 
+						<p style='text-align: center'>Download Your Favourite:</p>
+						<p style='padding-left: 90px'><i>Trailers<br>Featurettes<br>Movie Posters<br>Celebrity Photos</i></p>
+					</div>
+				</div>
+				<div id='Poll'>
+					<div class='textcenter'> 
+						<p style='text-align: center; font-size: 25px'> Today's Celebrity Poll:</p>
+						<p style='text-align: center; font-size: 18px'>Who is your favourite Director?</p>
+						<ul style='font-size: 17px; margin: 5px 70px'>
+							<li><span>Steven Spielberg</span></li>
+							<li><span>Martin Scorsese</span></li>
+							<li><span>Clint Eastwood</span></li>
+						</ul>
+					</div>
+				</div>
+			</article>
+		</section>
+		<section id='Genres'>
+			<ul class='CenterDivH' style='color:white'>
+				<li><span style='color:ffa900;font-size:25px'>genres:</span></li>
+				<li><span>DRAMA</span></li>
+				<li><span>COMEDY</span></li>
+				<li><span>ACTION</span></li>
+				<li><span>HORROR</span></li>
+				<li><span>WESTERN</span></li>
+				<li><span>THRILLER</span></li>
+			</ul>
+		</section>
+		<section id='ProgressBar'>
+			<progress id="file" class='CenterDivH' value="0" max="100"></progress>
+		</section>
+        <section id='DownloadButtonBox'>
+            <button id='DownloadButton' onclick="startDownload()" class='CenterDivH'>DOWNLOAD</button> 
+        </section>
+	</div>
+</div>
+</body>
+</html>
